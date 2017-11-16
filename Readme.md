@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Павел Катков](https://up.htmlacademy.ru/javascript/11/user/113885).
-* Наставник: `Неизвестно`.
+* Наставник: [Филипп Шамсиев](https://htmlacademy.ru/profile/id506255).
 
 ---
 
