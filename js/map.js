@@ -135,9 +135,10 @@ var createDialogPanelFragment = function (arr) {
   element.querySelector('p small').textContent = arr.offer.address;
   element.querySelector('.popup__price').textContent = arr.offer.price + ' ₽/ночь';
   element.querySelector('h4').textContent = translateOfferType(arr.offer.type);
-  element.querySelectorAll('p')[2].textContent = arr.offer.rooms + ' для ' +
+  var paragraphOfElement = element.querySelectorAll('p');
+  paragraphOfElement[2].textContent = arr.offer.rooms + ' для ' +
     arr.offer.guests + ' гостей';
-  element.querySelectorAll('p')[3].textContent = 'Заезд после ' + arr.offer.checkin +
+  paragraphOfElement[3].textContent = 'Заезд после ' + arr.offer.checkin +
     ', выезд до ' + arr.offer.checkout;
   var listPopupFeatures = element.querySelector('.popup__features');
   while (listPopupFeatures.firstChild) {
@@ -146,7 +147,7 @@ var createDialogPanelFragment = function (arr) {
   for (var k = 0; k < arr.offer.features.length; k++) {
     listPopupFeatures.appendChild(generateFeatureSpan(arr.offer.features[k]));
   }
-  element.querySelectorAll('p')[4].textContent = arr.offer.description;
+  paragraphOfElement[4].textContent = arr.offer.description;
 
   // Меняе SRC....
   element.querySelector('.popup__avatar').setAttribute('src', arr.author.avatar);
